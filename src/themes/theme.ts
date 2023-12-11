@@ -109,10 +109,45 @@ declare module "@mui/material" {
 
   // FabProps
   interface FabPropsVariantOverrides {
-    quicks: true;
+    activeQuicks: true;
+    inactiveQuicks: true;
   }
 
   interface FabPropsColorOverrides {
+    salmon: true;
+
+    // Primary Color
+    primarySkyBlue: true;
+    primaryCharcoalGray: true;
+    primarySilverGray: true;
+    primaryLightGray: true;
+
+    // Indicator Color
+    indicatorSunsetOrange: true;
+    indicatorAmethystPurple: true;
+    indicatorCranberryRed: true;
+    indicatorHoneyYelow: true;
+
+    // Chat Color
+    chatPeachCream: true;
+    chatBurntOrange: true;
+    chatBabyBlue: true;
+    chatLavenderPurple: true;
+    chatSeafoamGreen: true;
+    chatForestGreen: true;
+
+    // Sticker COlor
+    stickerPaleBlue: true;
+    stickerCreamsicleOrange: true;
+    stickerPeachBlush: true;
+    stickerDustyBlue: true;
+    stickerMintGreen: true;
+    stickerLightBlueGray: true;
+    stickerRosePink: true;
+  }
+
+  // Box Props
+  interface BoxPropsColorOverrides {
     salmon: true;
 
     // Primary Color
@@ -155,10 +190,17 @@ let theme = createTheme({
     MuiFab: {
       variants: [
         {
-          props: { variant: "quicks" },
+          props: { variant: "activeQuicks" },
           style: {
             width: 68,
             height: 68,
+          },
+        },
+        {
+          props: { variant: "inactiveQuicks" },
+          style: {
+            width: 60,
+            height: 60,
           },
         },
       ],
