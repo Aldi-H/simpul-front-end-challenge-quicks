@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
+
+import "./globals.css";
 import theme from "@/themes/theme";
 
 // const inter = Inter({ subsets: ["latin"] });

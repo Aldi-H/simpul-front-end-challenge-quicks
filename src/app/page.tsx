@@ -1,30 +1,30 @@
-import { Button, Grid, Stack, Typography } from "@mui/material";
+"use client";
+
+import { useState } from "react";
+import { Box, Button, Fab, Grid, Menu, Stack, Typography } from "@mui/material";
+
+import {
+  CloudLightning,
+  InboxColoredOutline,
+  InboxDefaultOutline,
+} from "@/components/icons/Icons";
+import {
+  ActiveFloatingActionButton,
+  InactiveFloatingActionButton,
+} from "@/components/fab/FloatingActionButton";
+import PopperFab from "@/components/popper/PopperFab";
+import InboxDrawer from "@/components/drawer/InboxDrawer";
 
 export default function Home() {
-  return (
-    <Grid
-      container
-      height="100vh"
-      alignItems="center"
-      justifyContent="center"
-      direction="column"
-    >
-      <Typography>Using Material UI with Next.js 13</Typography>
-      <Stack direction="row" columnGap={1}>
-        <Button variant="text" className="text-red-600">
-          Text
-        </Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-      </Stack>
+  const [isOpen, setIsOpen] = useState(false);
 
-      <Typography
-        variant="h1"
-        component="h2"
-        className="text-teal-800 font-bold text-[12px]"
-      >
-        h1. Heading (this is a 12px font??)
-      </Typography>
-    </Grid>
+  const handleButtonOnClick = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <Box>
+      <InboxDrawer />
+      <PopperFab />
+    </Box>
   );
 }
