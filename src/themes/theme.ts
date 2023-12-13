@@ -12,6 +12,7 @@ declare module "@mui/material/styles" {
     primaryCharcoalGray: Palette;
     primarySilverGray: Palette;
     primaryLightGray: Palette;
+    primaryWhite: Palette;
 
     // Indicator Color
     indicatorSunsetOrange: Palette;
@@ -45,6 +46,7 @@ declare module "@mui/material/styles" {
     primaryCharcoalGray?: PaletteOptions;
     primarySilverGray?: PaletteOptions;
     primaryLightGray?: PaletteOptions;
+    primaryWhite?: PaletteOptions;
 
     // Indicator Color
     indicatorSunsetOrange?: PaletteOptions;
@@ -179,6 +181,40 @@ declare module "@mui/material" {
     stickerLightBlueGray: true;
     stickerRosePink: true;
   }
+
+  interface ButtonPropsColorOverrides {
+    salmon: true;
+
+    // Primary Color
+    primarySkyBlue: true;
+    primaryCharcoalGray: true;
+    primarySilverGray: true;
+    primaryLightGray: true;
+    primaryWhite: true;
+
+    // Indicator Color
+    indicatorSunsetOrange: true;
+    indicatorAmethystPurple: true;
+    indicatorCranberryRed: true;
+    indicatorHoneyYelow: true;
+  }
+
+  interface CheckboxPropsColorOverrides {
+    salmon: true;
+
+    // Primary Color
+    primarySkyBlue: true;
+    primaryCharcoalGray: true;
+    primarySilverGray: true;
+    primaryLightGray: true;
+    primaryWhite: true;
+
+    // Indicator Color
+    indicatorSunsetOrange: true;
+    indicatorAmethystPurple: true;
+    indicatorCranberryRed: true;
+    indicatorHoneyYelow: true;
+  }
 }
 
 // Custom Theme
@@ -248,6 +284,12 @@ theme = createTheme(theme, {
         main: "#E0E0E0",
       },
       name: "primaryLightGray",
+    }),
+    primaryWithe: theme.palette.augmentColor({
+      color: {
+        main: "#FDFDFD",
+      },
+      name: "primaryWithe",
     }),
 
     // Indicator Color
