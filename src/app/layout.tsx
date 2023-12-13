@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 
 import "./globals.css";
 import theme from "@/themes/theme";
+import Providers from "./Providers";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Providers>{children}</Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
