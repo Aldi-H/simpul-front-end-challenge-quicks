@@ -15,7 +15,7 @@ const InboxDrawer = () => {
     <Box
       bgcolor="white"
       width="734px"
-      height="537px"
+      height="517px"
       borderRadius="5px"
       border={0.1}
       overflow="auto"
